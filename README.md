@@ -1,8 +1,6 @@
-# Activerecord Globalize
+# ActiveRecord Globalize [![Build Status](https://travis-ci.org/mohamedelfiky/activerecord_globalize.svg?branch=master)](https://travis-ci.org/mohamedelfiky/activerecord_globalize) [![Code Climate](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/badges/gpa.svg)](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize) [![Test Coverage](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/badges/coverage.svg)](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/coverage)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/activerecord_globalize`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Rails I18n library for ActiveRecord model/data translation using PostgreSQL's hstore datatype. It provides an interface inspired by hstore_translate but without the need for data migrations (zero down time solution for large set of data).
 
 ## Installation
 
@@ -22,7 +20,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You'll need to define an hstore column for each of your translated attributes, using the suffix "_translations":
+
+```ruby
+class CreatePosts < ActiveRecord::Migration
+  def up
+    create_table :posts do |t|
+      t.column :title_translations, 'hstore'
+      t.column :body_translations,  'hstore'
+      t.timestamps
+    end
+  end
+  def down
+    drop_table :posts
+  end
+end
+```
+
+Model translations allow you to translate your models' attribute values.
+
+```ruby
+class Post < ActiveRecord::Base
+  translates :title, :body
+end
+```
+
+Allows you to translate the attributes :title and :body per locale:
+
+```ruby
+I18n.locale = :en
+post.title # => This database rocks!
+
+I18n.locale = :he
+post.title # => אתר זה טוב
+```
+
 
 ## Development
 
@@ -32,7 +64,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/activerecord_globalize/fork )
+1. Fork it ( https://github.com/mohamedelfiky/activerecord_globalize/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
