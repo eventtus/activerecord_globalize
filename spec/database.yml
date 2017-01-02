@@ -1,0 +1,7 @@
+test:
+  adapter:  postgresql
+  host:     localhost
+  database: activerecord_globalize_test
+  username: postgres
+  password: root
+  min_messages: warning

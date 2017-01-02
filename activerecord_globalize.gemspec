@@ -23,7 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'codeclimate-test-reporter'
-  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'pg'
+  spec.add_development_dependency 'database_cleaner'
   spec.add_development_dependency 'appraisal'
 
   spec.add_dependency 'activerecord', '>= 4.0.0'
