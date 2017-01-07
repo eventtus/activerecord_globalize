@@ -38,6 +38,7 @@ GEM
       thor (>= 0.14.0)
     arel (4.0.2)
     builder (3.1.4)
+    byebug (9.0.6)
     codeclimate-test-reporter (1.0.3)
       simplecov
     concurrent-ruby (1.0.2)
@@ -108,6 +109,7 @@ DEPENDENCIES
   activerecord_globalize!
   appraisal
   bundler (~> 1.8)
+  byebug
   codeclimate-test-reporter
   database_cleaner
   pg
