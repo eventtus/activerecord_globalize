@@ -27,6 +27,7 @@ module DatabaseLoader
       enable_extension
     end
 
+    # :nocov:
     def enable_extension
       connection = establish_connection
       unless connection.select_value("SELECT proname FROM pg_proc WHERE proname = 'akeys'")
@@ -39,6 +40,7 @@ module DatabaseLoader
         end
       end
     end
+    # :nocov:
 
     def create_table
       connection = establish_connection

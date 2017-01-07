@@ -19,7 +19,8 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
 
-    I18n.available_locales = ['en', 'en-US', 'fr']
+    I18n.available_locales = ['en', 'en-US', 'fr', 'es']
+    I18n.default_locale = 'en'
     I18n.config.enforce_available_locales = true
   end
 
