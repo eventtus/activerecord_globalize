@@ -36,7 +36,7 @@ class CreatePosts < ActiveRecord::Migration
   end
 end
 ```
-then run rake `db:migrate`
+then run `rake db:migrate`
 
 If you got an error `PG::UndefinedObject: ERROR: type "hstore" does not exist` add `enable_extension 'hstore'` before creating hstore columns in migration file to enable hstore extention on postgres db.
 
