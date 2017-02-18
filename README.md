@@ -1,4 +1,4 @@
-# ActiveRecord Globalize [![Build Status](https://travis-ci.org/mohamedelfiky/activerecord_globalize.svg?branch=master)](https://travis-ci.org/mohamedelfiky/activerecord_globalize) [![Code Climate](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/badges/gpa.svg)](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize) [![Test Coverage](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/badges/coverage.svg)](https://codeclimate.com/github/mohamedelfiky/activerecord_globalize/coverage) [![Inline docs](http://inch-ci.org/github/mohamedelfiky/activerecord_globalize.svg?branch=master)](http://inch-ci.org/github/mohamedelfiky/activerecord_globalize)
+# ActiveRecord Globalize [![Build Status](https://travis-ci.org/eventtus/activerecord_globalize.svg?branch=master)](https://travis-ci.org/eventtus/activerecord_globalize) [![Code Climate](https://codeclimate.com/github/eventtus/activerecord_globalize/badges/gpa.svg)](https://codeclimate.com/github/eventtus/activerecord_globalize) [![Test Coverage](https://codeclimate.com/github/eventtus/activerecord_globalize/badges/coverage.svg)](https://codeclimate.com/github/eventtus/activerecord_globalize/coverage) [![Inline docs](http://inch-ci.org/github/eventtus/activerecord_globalize.svg?branch=master)](http://inch-ci.org/github/eventtus/activerecord_globalize)
 
 Rails I18n library for ActiveRecord model/data translation using PostgreSQL's hstore datatype. It provides an interface inspired by hstore_translate but without the need for data migrations (zero down time solution for large set of data).
 
@@ -69,8 +69,20 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/mohamedelfiky/activerecord_globalize/fork )
+1. Fork it ( https://github.com/eventtus/activerecord_globalize/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+## License
+
+MIT/BSD
+
+## Credits
+
+[![Eventtus](http://assets.eventtus.com/logos/eventtus/standard.png)](http://eventtus.com)
+
+Created by [Mohamed Elfiky](https://github.com/mohamedelfiky) and sponsored by [Eventtus](http://eventtus.com).
+
